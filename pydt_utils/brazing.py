@@ -19,14 +19,14 @@ def detect_liquidus_crossing(
     tolerance: float = 1.0
 ) -> List[Dict[str, Union[int, float, str]]]:
     """
-    Detect when and where the temperature crosses the filler material's liquidus temperature.
+    Detect when and where the temperature crosses the material material's liquidus temperature.
     
-    This is critical for brazing as it indicates when the filler material melts and flows.
+    This is critical for brazing as it indicates when the material material melts and flows.
     
     Args:
         time: Array of time values
         temperature: Array of temperature values (°C)
-        liquidus_temp: Liquidus temperature of filler material (°C)
+        liquidus_temp: Liquidus temperature of material material (°C)
         tolerance: Temperature tolerance for crossing detection (°C, default: 1.0)
     
     Returns:
@@ -201,7 +201,7 @@ def calculate_brazing_quality_score(
     Calculate an overall quality score for a brazing cycle (0-100).
     
     Considers multiple factors:
-    - Liquidus crossing (did filler melt?)
+    - Liquidus crossing (did material melt?)
     - Hold time adequacy
     - Temperature stability
     - Overshoot control
@@ -210,7 +210,7 @@ def calculate_brazing_quality_score(
     Args:
         time: Array of time values
         temperature: Array of temperature values (°C)
-        liquidus_temp: Liquidus temperature of filler (°C)
+        liquidus_temp: Liquidus temperature of material (°C)
         target_temp: Target brazing temperature (°C)
         target_hold_time: Required hold time (minutes)
         max_temp_limit: Maximum allowable temperature (°C, optional)
@@ -237,7 +237,7 @@ def calculate_brazing_quality_score(
     
     if len(heating_crossings) == 0:
         liquidus_score = 0
-        issues.append("Filler material never reached liquidus temperature")
+        issues.append("material material never reached liquidus temperature")
     elif len(heating_crossings) == 1:
         liquidus_score = 25
     else:

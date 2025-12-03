@@ -15,11 +15,6 @@ A comprehensive Python library for thermal cycle analysis, brazing validation, a
 - **Soak Detection**: Identify temperature plateaus automatically
 - **Cycle Segmentation**: Break cycles into ramp-up, soak, ramp-down, and cooling stages
 
-### ⚙️ Brazing Validation (`brazing.py`)
-- **Liquidus Crossing Detection**: Track when filler material melts
-- **Stage Validation**: Verify brazing stages meet time/temperature requirements
-- **Quality Scoring**: Calculate overall brazing quality (0-100 score with letter grade)
-- **Thermal Budget Checking**: Ensure cycles stay within safe temperature limits
 
 ### 🌡️ Thermal Simulation (`thermal.py`)
 - **Heat Flux Calculations**: Fourier's law implementation
@@ -35,7 +30,6 @@ A comprehensive Python library for thermal cycle analysis, brazing validation, a
 
 ### 📊 Visualization (`plot.py`)
 - **Thermal Cycle Plots**: Professional cycle visualization with stage annotations
-- **Brazing Stage Plots**: Highlight liquidus crossing and brazing zones
 - **Anomaly Highlighting**: Mark detected anomalies on temperature curves
 - **Temperature Distribution**: Spatial temperature profile plotting
 - **Cycle Comparison**: Compare multiple thermal cycles side-by-side
@@ -90,49 +84,7 @@ for stage in stages:
 plot_thermal_cycle(time, temperature, stages=stages, save_path='cycle.png')
 ```
 
-### Example 2: Validate a Brazing Process
-
-```python
-from pydt_utils import (
-    detect_liquidus_crossing,
-    validate_brazing_stage,
-    calculate_brazing_quality_score,
-    plot_brazing_stages
-)
-
-# Define brazing parameters
-liquidus_temp = 450  # °C (e.g., silver-based filler)
-target_temp = 600    # °C
-target_hold = 30     # minutes
-
-# Detect liquidus crossings
-crossings = detect_liquidus_crossing(time, temperature, liquidus_temp)
-print(f"Liquidus crossed {len(crossings)} times")
-
-# Validate brazing stage
-validation = validate_brazing_stage(
-    time, temperature,
-    target_temp=target_temp,
-    hold_time=target_hold
-)
-print(f"Stage valid: {validation['valid']}")
-print(f"Actual hold time: {validation['actual_hold_time']:.1f} min")
-
-# Calculate quality score
-score = calculate_brazing_quality_score(
-    time, temperature,
-    liquidus_temp=liquidus_temp,
-    target_temp=target_temp,
-    target_hold_time=target_hold
-)
-print(f"Quality Score: {score['overall_score']:.1f}/100 (Grade: {score['grade']})")
-print(f"Issues: {score['issues']}")
-
-# Visualize brazing cycle
-plot_brazing_stages(time, temperature, liquidus_temp, target_temp=target_temp)
-```
-
-### Example 3: Detect Anomalies
+### Example 2: Detect Anomalies
 
 ```python
 from pydt_utils import (
@@ -158,7 +110,7 @@ anomaly_indices = np.where(anomalies)[0]
 plot_with_anomalies(time, temperature, anomaly_indices, anomaly_type="Statistical Anomaly")
 ```
 
-### Example 4: Thermal Simulation
+### Example 3: Thermal Simulation
 
 ```python
 from pydt_utils import (
@@ -203,54 +155,7 @@ Bi = calculate_biot_number(h=10, L=0.01, k=15)
 print(f"Biot number: {Bi:.4f} (< 0.1 means lumped model valid)")
 ```
 
-## API Reference
 
-### Cycle Module
-
-| Function | Description |
-|----------|-------------|
-| `calculate_ramp_rate(time, temperature, window_size)` | Calculate heating/cooling rates |
-| `smooth_temperature_data(temperature, window_size, method)` | Smooth noisy temperature data |
-| `detect_soak_zones(time, temperature, tolerance, min_duration)` | Find temperature plateaus |
-| `segment_thermal_cycle(time, temperature, rate_threshold)` | Segment cycle into stages |
-
-### Brazing Module
-
-| Function | Description |
-|----------|-------------|
-| `detect_liquidus_crossing(time, temperature, liquidus_temp)` | Detect filler melting points |
-| `validate_brazing_stage(time, temperature, target_temp, hold_time)` | Validate stage requirements |
-| `calculate_brazing_quality_score(time, temperature, ...)` | Overall quality assessment |
-| `check_thermal_budget(time, temperature, min_temp, max_temp)` | Verify temperature limits |
-
-### Thermal Module
-
-| Function | Description |
-|----------|-------------|
-| `calculate_heat_flux(gradient, conductivity)` | Fourier's law heat flux |
-| `solve_1d_diffusion(initial_temp, bc, ...)` | 1D heat equation solver |
-| `calculate_biot_number(h, L, k)` | Dimensionless heat transfer |
-| `estimate_cooling_time(T_initial, T_final, ...)` | Cooling time estimation |
-| `calculate_fourier_number(alpha, t, L)` | Dimensionless time parameter |
-
-### Anomaly Module
-
-| Function | Description |
-|----------|-------------|
-| `detect_temperature_spikes(time, temperature, threshold_std)` | Statistical spike detection |
-| `detect_overshoot(time, temperature, target_temp)` | Overshoot identification |
-| `detect_rate_anomalies(time, temperature, expected_rate)` | Rate deviation detection |
-| `statistical_anomaly_detection(data, method)` | Z-score/IQR/MAD methods |
-
-### Plot Module
-
-| Function | Description |
-|----------|-------------|
-| `plot_thermal_cycle(time, temperature, stages)` | Complete cycle visualization |
-| `plot_brazing_stages(time, temperature, liquidus_temp)` | Brazing-specific plot |
-| `plot_with_anomalies(time, temperature, anomaly_indices)` | Highlight anomalies |
-| `plot_temperature_distribution(x, temperature)` | Spatial temperature profile |
-| `create_cycle_comparison(cycles_dict)` | Compare multiple cycles |
 
 ## Testing
 
@@ -282,7 +187,7 @@ If you use this library in your research, please cite:
 ```bibtex
 @software{pydt_utils,
   title = {pydt-utils: Digital Twin + Brazing Utilities},
-  author = {Manthan},
+  author = {muthuvel vishwa},
   year = {2025},
   url = {https://github.com/manthan/pydt-utils}
 }

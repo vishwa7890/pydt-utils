@@ -114,7 +114,7 @@ def plot_brazing_stages(
     Args:
         time: Array of time values
         temperature: Array of temperature values
-        liquidus_temp: Liquidus temperature of filler material (°C)
+        liquidus_temp: Liquidus temperature of material (°C)
         stages: Optional list of brazing stages
         target_temp: Optional target brazing temperature
         figsize: Figure size (width, height)
