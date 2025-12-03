@@ -8,9 +8,8 @@ version = "0.1.1"
 description = "Thermal cycle analysis, validation"
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
 authors = [
-    {name = "Muthuvel vishwa", email = "Muthuvel vishwa@example.com"}
+    {name = "Vishwa A", email = "vishwa7890@gmail.com"}
 ]
 keywords = ["digital-twin", "brazing", "thermal-analysis", "simulation", "anomaly-detection"]
 classifiers = [
@@ -42,10 +41,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Muthuvel vishwa/pydt-utils"
-Documentation = "https://github.com/Muthuvel vishwa/pydt-utils#readme"
-Repository = "https://github.com/Muthuvel vishwa/pydt-utils"
-Issues = "https://github.com/Muthuvel vishwa/pydt-utils/issues"
+Homepage = "https://github.com/vishwa7890/pydt-utils"
+Documentation = "https://github.com/vishwa7890/pydt-utils#readme"
+Repository = "https://github.com/vishwa7890/pydt-utils"
+Issues = "https://github.com/vishwa7890/pydt-utils/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
