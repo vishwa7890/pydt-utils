@@ -8,11 +8,14 @@ version = "0.1.1"
 description = "Thermal cycle analysis, validation"
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
+license = "MIT"
+
 authors = [
-    {name = "Vishwa A", email = "vishwa7890@gmail.com"}
+    { name = "Vishwa A", email = "vishwa7890@gmail.com" }
 ]
+
 keywords = ["digital-twin", "brazing", "thermal-analysis", "simulation", "anomaly-detection"]
+
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
@@ -55,7 +58,6 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-# addopts = "-v --cov=pydt_utils --cov-report=term-missing"  # Commented out for Python 3.13 compatibility
 
 [tool.black]
 line-length = 100

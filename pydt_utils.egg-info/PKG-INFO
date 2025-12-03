@@ -3,7 +3,7 @@ Name: pydt-utils
 Version: 0.1.1
 Summary: Thermal cycle analysis, validation
 Author-email: Vishwa A <vishwa7890@gmail.com>
-License: MIT
+License-Expression: MIT
 Project-URL: Homepage, https://github.com/vishwa7890/pydt-utils
 Project-URL: Documentation, https://github.com/vishwa7890/pydt-utils#readme
 Project-URL: Repository, https://github.com/vishwa7890/pydt-utils
