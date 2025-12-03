@@ -9,26 +9,26 @@ A comprehensive Python library for thermal  analysis, brazing validation, anomal
 
 ## Features
 
-### 🔥 Thermal  Analysis (`cycle.py`)
+### 🔥 Thermal  Analysis
 - **Ramp Rate Calculation**: Compute heating/cooling rates with noise reduction
 - **Data Smoothing**: Savitzky-Golay and moving average filters
 - **Soak Detection**: Identify temperature plateaus automatically
 - ** Segmentation**: Break s into ramp-up, soak, ramp-down, and cooling stages
 
 
-### 🌡️ Thermal Simulation (`thermal.py`)
+### 🌡️ Thermal Simulation 
 - **Heat Flux Calculations**: Fourier's law implementation
 - **1D Diffusion Solver**: Explicit finite difference method for heat equation
 - **Dimensionless Numbers**: Biot and Fourier number calculations
 - **Cooling Time Estimation**: Lumped capacitance model
 
-### 🔍 Anomaly Detection (`anomaly.py`)
+### 🔍 Anomaly Detection 
 - **Spike Detection**: Statistical identification of temperature spikes
 - **Overshoot Detection**: Find temperature overshoots beyond targets
 - **Rate Anomalies**: Detect unexpected heating/cooling rate changes
 - **Statistical Methods**: Z-score, IQR, and MAD anomaly detection
 
-### 📊 Visualization (`plot.py`)
+### 📊 Visualization
 - **Thermal  Plots**: Professional  visualization with stage annotations
 - **Anomaly Highlighting**: Mark detected anomalies on temperature curves
 - **Temperature Distribution**: Spatial temperature profile plotting
