@@ -3,6 +3,7 @@ Name: pydt-utils
 Version: 0.1.1
 Summary: Thermal cycle analysis, validation
 Author-email: Vishwa A <vishwa7890@gmail.com>
+License: MIT
 Project-URL: Homepage, https://github.com/vishwa7890/pydt-utils
 Project-URL: Documentation, https://github.com/vishwa7890/pydt-utils#readme
 Project-URL: Repository, https://github.com/vishwa7890/pydt-utils
@@ -11,7 +12,6 @@ Keywords: digital-twin,brazing,thermal-analysis,simulation,anomaly-detection
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Science/Research
 Classifier: Intended Audience :: Manufacturing
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
