@@ -1,19 +1,19 @@
 # pydt-utils
 
-**Thermal cycle analysis, validation**
+**Thermal  analysis, validation**
 
-A comprehensive Python library for thermal cycle analysis, brazing validation, anomaly detection, thermal simulation, and visualization utilities for digital twin applications in manufacturing.
+A comprehensive Python library for thermal  analysis, brazing validation, anomaly detection, thermal simulation, and visualization utilities for digital twin applications in manufacturing.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 ## Features
 
-### 🔥 Thermal Cycle Analysis (`cycle.py`)
+### 🔥 Thermal  Analysis (`cycle.py`)
 - **Ramp Rate Calculation**: Compute heating/cooling rates with noise reduction
 - **Data Smoothing**: Savitzky-Golay and moving average filters
 - **Soak Detection**: Identify temperature plateaus automatically
-- **Cycle Segmentation**: Break cycles into ramp-up, soak, ramp-down, and cooling stages
+- ** Segmentation**: Break s into ramp-up, soak, ramp-down, and cooling stages
 
 
 ### 🌡️ Thermal Simulation (`thermal.py`)
@@ -29,10 +29,10 @@ A comprehensive Python library for thermal cycle analysis, brazing validation, a
 - **Statistical Methods**: Z-score, IQR, and MAD anomaly detection
 
 ### 📊 Visualization (`plot.py`)
-- **Thermal Cycle Plots**: Professional cycle visualization with stage annotations
+- **Thermal  Plots**: Professional  visualization with stage annotations
 - **Anomaly Highlighting**: Mark detected anomalies on temperature curves
 - **Temperature Distribution**: Spatial temperature profile plotting
-- **Cycle Comparison**: Compare multiple thermal cycles side-by-side
+- ** Comparison**: Compare multiple thermals side-by-side
 
 ## Installation
 
@@ -58,13 +58,13 @@ pip install -e ".[dev]"
 
 ## Quick Start
 
-### Example 1: Analyze a Thermal Cycle
+### Example 1: Analyze a Thermal 
 
 ```python
 import numpy as np
-from pydt_utils import calculate_ramp_rate, segment_thermal_cycle, plot_thermal_cycle
+from pydt_utils import calculate_ramp_rate, segment_thermal_, plot_thermal_
 
-# Load or generate thermal cycle data
+# Load or generate thermal  data
 time = np.linspace(0, 200, 2000)  # minutes
 temperature = np.piecewise(time,
     [time < 50, (time >= 50) & (time < 150), time >= 150],
@@ -75,13 +75,13 @@ temperature = np.piecewise(time,
 rates = calculate_ramp_rate(time, temperature)
 print(f"Average heating rate: {np.mean(rates[rates > 0]):.2f} °C/min")
 
-# Segment the cycle
-stages = segment_thermal_cycle(time, temperature)
+# Segment the 
+stages = segment_thermal_(time, temperature)
 for stage in stages:
     print(f"{stage['stage_type']}: {stage['duration']:.1f} min")
 
 # Visualize
-plot_thermal_cycle(time, temperature, stages=stages, save_path='cycle.png')
+plot_thermal_(time, temperature, stages=stages, save_path='.png')
 ```
 
 ### Example 2: Detect Anomalies
@@ -200,4 +200,5 @@ For questions, issues, or suggestions, please open an issue on GitHub.
 ---
 
 **Made with ❤️ for the manufacturing and digital twin community**
+# pydt-utils
 # pydt-utils
