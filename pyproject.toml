@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pydt-utils"
 version = "0.1.0"
-description = "Digital Twin + Brazing utilities for thermal cycle analysis, validation, and simulation"
+description = "Thermal cycle analysis, validation"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Manthan", email = "manthan@example.com"}
+    {name = "Muthuvel vishwa", email = "Muthuvel vishwa@example.com"}
 ]
 keywords = ["digital-twin", "brazing", "thermal-analysis", "simulation", "anomaly-detection"]
 classifiers = [
@@ -42,10 +42,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/manthan/pydt-utils"
-Documentation = "https://github.com/manthan/pydt-utils#readme"
-Repository = "https://github.com/manthan/pydt-utils"
-Issues = "https://github.com/manthan/pydt-utils/issues"
+Homepage = "https://github.com/Muthuvel vishwa/pydt-utils"
+Documentation = "https://github.com/Muthuvel vishwa/pydt-utils#readme"
+Repository = "https://github.com/Muthuvel vishwa/pydt-utils"
+Issues = "https://github.com/Muthuvel vishwa/pydt-utils/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

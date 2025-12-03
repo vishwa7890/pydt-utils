@@ -1,6 +1,6 @@
 # pydt-utils
 
-**Digital Twin + Brazing Utilities for Python**
+**Thermal cycle analysis, validation**
 
 A comprehensive Python library for thermal cycle analysis, brazing validation, anomaly detection, thermal simulation, and visualization utilities for digital twin applications in manufacturing.
 
